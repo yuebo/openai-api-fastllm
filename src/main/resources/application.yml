@@ -1,0 +1,8 @@
+server:
+  port: 9000
+  servlet:
+    context-path: /
+fastllm:
+  url: ${CHATGLM_URL:http://fastllm-web:8080}
+  embedding-url: ${EMBEDDING_URL:http://m3e-api:8080/m3e}
+  qwen-url: ${QWEN_VL_URL:http://qwen-vl:8080}
