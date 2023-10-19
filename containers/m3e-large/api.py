@@ -26,7 +26,7 @@ def embedding():
     body = request.get_data()
     data = json.loads(body)
     sentences = data['sentences']
-    embeddings = model.encode(sentences).tolist()
+    embeddings = model.encode(sentences,normalize_embeddings=True).tolist()
     return jsonify({
         "embeddings": embeddings
     })
